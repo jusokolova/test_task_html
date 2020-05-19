@@ -1,0 +1,85 @@
+html {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    overflow-y: auto;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #282828;
+}
+h1 {
+    color: #fff;
+    margin: 0;
+}
+.chat {
+    width: 100%;
+    overflow-y: scroll;
+    height: calc(100% - 64px);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+}
+div.question, div.questionAwait {
+    position: relative;
+    align-self: flex-end;
+    padding: 10px 15px;
+    background-color: white;
+    border-radius: 30px;
+}
+div.question::after, div.questionAwait::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: -100px;
+    width: 70px;
+    height: 70px;
+    background-image: url('../images/bot.svg');
+}
+div.personAnswer {
+    position: relative;
+    align-self: flex-start;
+    padding: 10px 15px;
+    background-color: #F9C35B;
+    min-width: 30%;
+    max-width: 70%;
+    border-radius: 30px;
+    margin-bottom: 45px;
+}
+div.personAnswer::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -100px;
+    width: 70px;
+    height: 70px;
+    background-image: url('../images/person.svg');
+}
+form {
+    background-color: #fff;
+    z-index: 2;
+    display: flex;
+}
+textarea {
+    outline: none;
+    border: none;
+    width: 70%;
+    height: 25px;
+    margin: 20px 0 20px 20px;
+    resize: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+}
+input {
+    position: absolute;
+    width: 39px;
+    height: 34px;
+    top: 25%;
+    border: none;
+    outline: none;
+    background-image: url('../images/send.svg');
+    background-color: transparent;
+}
+textarea:focus + input {
+    background-image: url('../images/send_active.svg');
+}
