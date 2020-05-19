@@ -1,0 +1,58 @@
+@media all and (min-width: 376px) and (max-width: 768px) {
+    header {
+        width: 100%;
+        height: 64px;
+        background-color: #282828;
+        position: fixed;
+        z-index: 2;
+    }
+    h1 {
+        font-size: 32px;
+        line-height: 50px;
+        margin: 7px 0 0 20px;
+    }
+    .container {
+        z-index: 1;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 64px);
+        box-sizing: border-box;
+    }
+    .chat {
+        overflow-y: scroll;
+        height: calc(100% - 64px);
+    }
+    div.question {
+        max-width: 70%;
+        margin-bottom: 45px;
+        margin-right: 20%;
+    }
+    div.questionAwait {
+        max-width: 70%;
+        margin-bottom: 45px;
+        margin-right: 20%;
+    }
+    div.question::after {
+        right: -25%;
+    }
+    div.questionAwait::after {
+        right: -75px;
+    }
+    div.personAnswer {
+        margin-left: 20%;
+    }
+    div.personAnswer::before {
+        left: -70px;
+    }
+    form {
+        position: fixed;
+        top: calc(100vh - 64px);
+        height: 64px;
+        width: 100%;
+    }
+    input {
+        left: 80%;
+    }
+}
